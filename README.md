@@ -36,9 +36,11 @@
 
    <a href="https://replit.com/@ChamodKeshan/QueenAlexa-MD?output%20only=1&lite=1"><img src="https://repl.it/badge/github/ChamodKeshan/Queen-Alexa">
     </p>    <a/>
-````
-Thanks to DGXeon bro.Using with replit code.
-````
+
+# 🧚‍♂️Click to diploy👑
+    
+   <a herf="https://heroku.com/deploy?template=https://github.com/ChamodKeshan/Alexa-New"><img src="https://github.com/Queen-Alexa.png">
+   </p>     <a/>
 ## 👨‍💻 Developers & Contributors 👨‍💻
 
  [![EN-Cuzier](https://github.com/En-Cuzier.png?size=100)](https://github.com/En-Cuzier) | [![jesonpro](https://github.com/jesonpro.png?size=100)](https://github.com/jesonpro) | [![ChamodKeshan](https://github.com/ChamodKeshan.png?size=100)](https://github.com/ChamodKeshan) |
