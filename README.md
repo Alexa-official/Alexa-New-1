@@ -39,7 +39,7 @@
 
 # 🧚‍♂️Click to diploy👑
     
-   <a herf="https://heroku.com/deploy?template=https://github.com/ChamodKeshan/Alexa-New"><img src="https://github.com/Queen-Alexa.png">
+  <a herf="https://heroku.com/deploy?template=https://github.com/ChamodKeshan/Alexa-New"><img src="https://github.com/Queen-Alexa.png">
    </p>     <a/>
 ## 👨‍💻 Developers & Contributors 👨‍💻
 
