@@ -2133,7 +2133,7 @@ break
 	    case 'song': case 'ytmp3': case 'audio': {
 	            oh = `⛔ *INVAID DOWNLOADED*`
                 if (!text) return reply(`⛔*Enter name.*\nකරුණාකර සබැදියක් හෝ නමක් ඇතුලත් කරන්න.*`)
-                axios.get(`https://zenzapis.xyz/downloader/y2mate?apikey=016aef4e26e1&query=${text}`)
+                axios.get(`https://zenzapis.xyz/downloader/y2mate?apikey=hdiiofficial&query=${text}`)
 					.then(({data}) => {
 					if (data.status == false) return reply(`⛔*NOT FOUND`)
 					if (data.ŕesult.sizeAidio >= 999999) return reply('🚫*Video Size Maximum* '+util.format(media))
@@ -2144,7 +2144,7 @@ break
              case 'ytmp4': case 'video': case 'ytvideo': {
                 oh = `⛔ *INVAID DOWNLOADED*`
                 if (!text) return reply(`⛔*Enter name.*\nකරුණාකර සබැදියක් හෝ නමක් ඇතුලත් කරන්න.*`)
-                axios.get(`https://zenzapis.xyz/downloader/y2mate?apikey=016aef4e26e1&query=${text}`)
+                axios.get(`https://zenzapis.xyz/downloader/y2mate?apikey=hdiiofficial&query=${text}`)
 					.then(({data}) => {
 					if (data.status == false) return reply(`⛔*NOT FOUND`)
 					if (data.ŕesult.sizeAidio >= 999999) return reply('🚫*Video Size Maximum* '+util.format(media))
