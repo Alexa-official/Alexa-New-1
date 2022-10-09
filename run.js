@@ -2133,13 +2133,10 @@ break
 	    case 'song': case 'ytmp3': case 'audio': {
 	            oh = `⛔ *INVAID DOWNLOADED*`
                 if (!text) return reply(`⛔*Enter name.*\nකරුණාකර සබැදියක් හෝ නමක් ඇතුලත් කරන්න.*`)
-                await axios.get(`https://zenzapis.xyz/downloader/y2mate?apikey=hdiiofficial&query=${text}`)
-      .then(async (response) => {
-        const {
-          link,
-        } = response.data.result
-        const videoBuffer = await axios.get(link, )
-                XeonBotInc.sendMessage(m.chat, { audio: { url: videoBuffer.data }, mimetype: 'audio/mpeg', fileName: `${data.result.title}.mp3` }, { quoted: m }).catch ((err) => reply(oh))
+                axios.get(`http://zekais-api.herokuapp.com/ytplay?query=${text}&apikey=y77ZwRxG`)
+      .then(({data}) => {
+					if (data.status == false) return reply(`⛔ *NOT FOUND*`)
+                XeonBotInc.sendMessage(m.chat, { audio: { url: data.result }, mimetype: 'audio/mpeg', fileName: `${data.title}.mp3` }, { quoted: m }).catch ((err) => reply(oh))
              })
              }
              break
@@ -2148,7 +2145,7 @@ break
                 if (!text) return reply(`⛔*Enter name.*\nකරුණාකර සබැදියක් හෝ නමක් ඇතුලත් කරන්න.*`)
                 axios.get(`https://zenzapis.xyz/downloader/y2mate?apikey=hdiiofficial&query=lelena`)
 					.then(({data}) => {
-					if (data.status == false) return reply(`⛔*NOT FOUND*`)
+					if (data.status == false) return reply(`⛔ *NOT FOUND*`)
 					XeonBotInc.sendMessage(m.chat, { audio: { url: data.result.getVideo }, mimetype: 'video/mp4', fileName: `${data.result.title}.mp4` }, { quoted: m }).catch ((err) => reply(oh))
             })
             }
