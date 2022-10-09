@@ -2131,11 +2131,14 @@ break
             }
             break
 	    case 'song': case 'ytmp3': case 'audio': {
+	            if (!text) return reply(`⛔*Enter name.*\nකරුණාකර සබැදියක් හෝ නමක් ඇතුලත් කරන්න.*`)
+	            XeonBotInc.sendMessage(from, { text: `*~please wait, I'm search song~*` }, { quoted: m})
 	            oh = `⛔ *INVAID DOWNLOADED*`
-                if (!text) return reply(`⛔*Enter name.*\nකරුණාකර සබැදියක් හෝ නමක් ඇතුලත් කරන්න.*`)
+                
                 axios.get(`http://zekais-api.herokuapp.com/ytplay?query=${text}&apikey=y77ZwRxG`)
       .then(({data}) => {
 					if (data.status == false) return reply(`⛔ *NOT FOUND*`)
+                XeonBotInc.sendMessage(from, { text: `*•○●Download you song●○•*` }, { quoted: m})
                 XeonBotInc.sendMessage(m.chat, { audio: { url: data.result }, mimetype: 'audio/mpeg', fileName: `${data.title}.mp3` }, { quoted: m }).catch ((err) => reply(oh))
              })
              }
@@ -2143,10 +2146,11 @@ break
              case 'ytmp4': case 'video': case 'ytvideo': {
                 oh = `⛔ *INVAID DOWNLOADED*`
                 if (!text) return reply(`⛔*Enter name.*\nකරුණාකර සබැදියක් හෝ නමක් ඇතුලත් කරන්න.*`)
-                axios.get(`https://zenzapis.xyz/downloader/y2mate?apikey=hdiiofficial&query=lelena`)
+                axios.get(`http://zekais-api.herokuapp.com/ytvideo?query=${text}&apikey=y77ZwRxG`)
 					.then(({data}) => {
 					if (data.status == false) return reply(`⛔ *NOT FOUND*`)
-					XeonBotInc.sendMessage(m.chat, { audio: { url: data.result.getVideo }, mimetype: 'video/mp4', fileName: `${data.result.title}.mp4` }, { quoted: m }).catch ((err) => reply(oh))
+					XeonBotInc.sendMessage(from, { text: `*•○●Download you song●○•*` }, { quoted: m})
+					XeonBotInc.sendMessage(m.chat, { audio: { url: data.result }, mimetype: 'video/mp4' }, { quoted: m }).catch ((err) => reply(oh))
             })
             }
             break
@@ -2891,7 +2895,7 @@ case 'webtonsearch': case 'webtoon':
                 }
             }
             break
-	        case 'tiktokd': case 'tiktoknowmx': {
+	        case 'tiktok': case 'tiktoknowmx': {
                 if (!text) return reply(`Enter Query Link!`)
                 reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/downloader/tiktok', { url: text }, 'apikey'))
@@ -3017,7 +3021,7 @@ case 'webtonsearch': case 'webtoon':
                 XeonBotInc.sendMessage(m.chat, { audio: { url: anu.result.audio } }, { quoted: msg })
             }
             break
-	        case 'fbdlx': case 'fbx': case 'facebookx': {
+	        case 'fbdlx': case 'fb': case 'facebookx': {
                 if (!text) return reply(`Enter Query Link!`)
                 reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/api/downloader/facebook', { url: text }, 'apikey'))
@@ -4208,7 +4212,7 @@ else MSG = `\n\n*‍Queen👸Alexa*\n*💫🧚‍♀️Hey There Im Alive Now*\n
             }
             break
             case 'system': {
-                XeonBotInc.sendMessage(from, { text: `*👨‍💻VERSION = 1.0.0*\n*NEW UPDATE COMING SOON*\n*join alexa official support group*` }, { quoted: m})
+                XeonBotInc.sendMessage(from, { text: `*👨‍💻VERSION = 1.0.0*\n\n*NEW UPDATE COMING SOON*\n\n*join alexa official support group*` }, { quoted: m})
         }
             break
             case 'dyno': case 'clear': case 'mediafire': case 'fb': case 'tiktok': case 'panel': case 'mute': case 'update': {
