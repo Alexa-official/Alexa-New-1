@@ -213,10 +213,6 @@ const reply = (teks) => {
             XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./Alexa-New/media/main.jpg`),"sourceUrl": "https://github.com/ChamodKeshan/Queen-Alexa"}}}, { quoted: m})
         }
         
-        const repay = (teks) => {
-        XeonBotInc.sendMessage(from, { text: teks }, { quoted: m})
-       }
-        
         const replay = (teks) => {
             XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./Alexa-New/media/main.jpg`),"sourceUrl": "https://github.com/ChamodKeshan/Queen-Alexa"}}}, { quoted: m})
         }
@@ -2136,33 +2132,24 @@ break
             break
 	    case 'song': case 'ytmp3': case 'audio': {
 	            oh = `⛔ *INVAID DOWNLOADED*`
-                if (!text) return repay(`⛔*Enter name.*\nකරුණාකර සබැදියක් හෝ නමක් ඇතුලත් කරන්න.*`)
+                if (!text) return reply(`⛔*Enter name.*\nකරුණාකර සබැදියක් හෝ නමක් ඇතුලත් කරන්න.*`)
                 axios.get(`https://zenzapis.xyz/downloader/y2mate?apikey=016aef4e26e1&query=${text}`)
 					.then(({data}) => {
-					if (data.status == false) return repay(`⛔*NOT FOUND`)
+					if (data.status == false) return reply(`⛔*NOT FOUND`)
 					if (data.ŕesult.sizeAidio >= 999999) return reply('🚫*Video Size Maximum* '+util.format(media))
-					XeonBotInc.sendMessage(m.chat, { audio: { url: data.result.getAudio }, mimetype: 'audio/mpeg', fileName: `${data.result.title}.mp3` }, { quoted: m }).catch ((err) => repay(oh))
-             }          
-             break
-             case 'songxxxx': case 'getmusic': case 'ytaudio': {
-	            oh = `⛔ *INVAID DOWNLOADED*`
-                let { yta } = require('./lib/y2mate')
-                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
-                let quality = args[1] ? args[1] : '320kbps'
-                let media = await yta(text, quality)
-                if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                XeonBotInc.sendImage(m.chat, media.thumb, `🐶 Title : ${media.title}\n🐶 File Size : ${media.filesizeF}\n🐶 Url : ${isUrl(text)}\n🐶 Ext : MP3\n🐶 Resolution : ${args[1] || '320kbps'}`, m)
-                XeonBotInc.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m }).catch ((err) => reply(oh))
+					XeonBotInc.sendMessage(m.chat, { audio: { url: data.result.getAudio }, mimetype: 'audio/mpeg', fileName: `${data.result.title}.mp3` }, { quoted: m }).catch ((err) => reply(oh))
+             })
              }
              break
              case 'ytmp4': case 'video': case 'ytvideo': {
                 oh = `⛔ *INVAID DOWNLOADED*`
-                if (!text) return repay(`⛔*Enter name.*\nකරුණාකර සබැදියක් හෝ නමක් ඇතුලත් කරන්න.*`)
+                if (!text) return reply(`⛔*Enter name.*\nකරුණාකර සබැදියක් හෝ නමක් ඇතුලත් කරන්න.*`)
                 axios.get(`https://zenzapis.xyz/downloader/y2mate?apikey=016aef4e26e1&query=${text}`)
 					.then(({data}) => {
-					if (data.status == false) return repay(`⛔*NOT FOUND`)
+					if (data.status == false) return reply(`⛔*NOT FOUND`)
 					if (data.ŕesult.sizeAidio >= 999999) return reply('🚫*Video Size Maximum* '+util.format(media))
-					XeonBotInc.sendMessage(m.chat, { audio: { url: data.result.getVideo }, mimetype: 'video/mp4', fileName: `${data.result.title}.mp4` }, { quoted: m }).catch ((err) => repay(oh))
+					XeonBotInc.sendMessage(m.chat, { audio: { url: data.result.getVideo }, mimetype: 'video/mp4', fileName: `${data.result.title}.mp4` }, { quoted: m }).catch ((err) => reply(oh))
+            })
             }
             break
             case 'amazone': case 'neotro': {
