@@ -2133,11 +2133,14 @@ break
 	    case 'song': case 'ytmp3': case 'audio': {
 	            oh = `⛔ *INVAID DOWNLOADED*`
                 if (!text) return reply(`⛔*Enter name.*\nකරුණාකර සබැදියක් හෝ නමක් ඇතුලත් කරන්න.*`)
-                axios.get(`https://zenzapis.xyz/downloader/y2mate?apikey=hdiiofficial&query=${text}`)
-					.then(({data}) => {
-					if (data.status == false) return reply(`⛔*NOT FOUND`)
-					XeonBotInc.sendImage(m.chat, data.result.thumb, `🐶 Title : ${media.title}\n🐶 File Size : ${media.sizeAudio}`, m)
-					XeonBotInc.sendMessage(m.chat, { audio: { url: data.result.getAudio }, mimetype: 'audio/mpeg', fileName: `${data.result.title}.mp3` }, { quoted: m }).catch ((err) => reply(oh))
+                await axios
+      .get(`https://zenzapis.xyz/downloader/y2mate?apikey=hdiiofficial&query=${text}`)
+      .then(async (response) => {
+        const {
+          link,
+        } = response.data.result
+        const videoBuffer = await axios.get(link, {responseType: 'arraybuffer'})
+                XeonBotInc.sendMessage(m.chat, { audio: { url: videoBuffer.data }, mimetype: 'audio/mpeg', fileName: `${data.result.title}.mp3` }, { quoted: m }).catch ((err) => reply(oh))
              })
              }
              break
