@@ -47,7 +47,7 @@ ALIVEMSG = 'default'
 
 global.ig = 'https://github.com/Queen-Alexa'
 global.footer = '©_Queen_Alexa.' // DO NOT CHANGE!
-    },
+ 
     global.mess = { // Don't change
     success: 'Done ✅',
     admin: 'Only Admins can use it!😉',
