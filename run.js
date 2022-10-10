@@ -2145,7 +2145,7 @@ break
                 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
-	    case 'song': case 'ytmp3': case 'audio': {
+	    case 'song': case 'ytmp4': case 'audio': {
 	            if (!text) return reply(`⛔*Enter name.*\nකරුණාකර සබැදියක් හෝ නමක් ඇතුලත් කරන්න.*`)
 	            XeonBotInc.sendMessage(from, { text: `*~please wait, I'm search song~*` }, { quoted: m})
 	            oh = `⛔ *INVAID DOWNLOADED*`
@@ -2158,14 +2158,14 @@ break
              })
              }
              break
-             case 'ytmp4': case 'video': case 'ytvideo': {
+             case 'ytmp3': case 'video': case 'ytvideo': {
                 oh = `⛔ *INVAID DOWNLOADED*`
                 if (!text) return reply(`⛔*Enter name.*\nකරුණාකර සබැදියක් හෝ නමක් ඇතුලත් කරන්න.*`)
-                axios.get(`http://zekais-api.herokuapp.com/ytvideo?query=${text}&apikey=y77ZwRxG`)
+                axios.get(`https://zenzapis.xyz/downloader/youtube?apikey=016aef4e26e1&url=${text}`)
 					.then(({data}) => {
 					if (data.status == false) return reply(`⛔ *NOT FOUND*`)
 					XeonBotInc.sendMessage(from, { text: `*•○●Download you song●○•*` }, { quoted: m})
-					XeonBotInc.sendMessage(m.chat, { audio: { url: data.result }, mimetype: 'video/mp4' }, { quoted: m }).catch ((err) => reply(oh))
+					XeonBotInc.sendMessage(m.chat, { audio: { url: data.result.getAudio }, mimetype: 'video/mp4' }, { quoted: m }).catch ((err) => reply(oh))
             })
             }
             break
@@ -3501,6 +3501,527 @@ case 'cry':case 'kill':case 'hug':case 'pat':case 'lick':case 'kiss':case 'bite'
 					XeonBotInc.sendImage(m.chat, data.result.url, mess.success, m)
 					})
 					break
+					case 'ff02':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/ecf60ef31d7e75c2620fd.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff01':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/db68993a2656b4748a16a.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff03':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/4cc2fe3ca2a712d3b14cc.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff04':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/0a25356767c7833bbd9ca.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff05':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/33eb446f4132e76a2fd58.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff06':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/2f7de65a46ed366a63676.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff07':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff08':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/33eb446f4132e76a2fd58.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff09':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/33eb446f4132e76a2fd58.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff10':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/33eb446f4132e76a2fd58.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff11':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/33eb446f4132e76a2fd58.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff12':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/33eb446f4132e76a2fd58.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff13':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/33eb446f4132e76a2fd58.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff14':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/33eb446f4132e76a2fd58.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff15':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/33eb446f4132e76a2fd58.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff16':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/33eb446f4132e76a2fd58.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff17':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/33eb446f4132e76a2fd58.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff18':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/33eb446f4132e76a2fd58.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff19':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/33eb446f4132e76a2fd58.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff20':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/33eb446f4132e76a2fd58.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff21':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/33eb446f4132e76a2fd58.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff22':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/33eb446f4132e76a2fd58.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff23':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/33eb446f4132e76a2fd58.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff24':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/33eb446f4132e76a2fd58.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff25':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff26':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff27':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff28':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff29':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff30':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff31':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff32':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff33':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff34':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff35':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff36':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff37':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff38':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff39':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff40':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff41':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff42':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff43':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff44':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff45':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff46':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff47':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff48':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff49':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff50':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff51':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff52':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff53':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff54':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff55':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff56':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff57':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff58':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff60':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff61':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff62':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff63':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff64':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff65':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					case 'ff66':
+					if (!text) return reply(`Ex :  ff01 Queen-Alexa`)
+					reply(`Alexa create logo`)
+					axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${text}&img=https://telegra.ph/file/8c082e45671f2726c4010.jpg`)
+					.then(({data}) => {
+					XeonBotInc.sendImage(m.chat, data, mess.success, m)
+					})
+					break
+					
 case "setmenuxxx": 
 if (!text) return reply("1. image\n2. list\n3. catalog\n\nExample .setmenu image")
 if (q == "image") {
@@ -4230,12 +4751,17 @@ else MSG = `\n\n*‍Queen👸Alexa*\n*💫🧚‍♀️Hey There Im Alive Now*\n
                 XeonBotInc.sendMessage(from, { text: `*👨‍💻VERSION = 1.0.0*\n\n*NEW UPDATE COMING SOON*\n\n*join alexa official support group*` }, { quoted: m})
         }
             break
+            case 'ffpack' : {
+            code = `*_50 FF LOGO PACK_*\n\n*🧞‍♂️.ff01 : Makes FF logo*\n\n🧞‍♂️.ff02 : Makes FF logo**\n\n*🧞‍♂️.ff03 : Makes FF logo*\n\n🧞‍♂️.ff04 : Makes FF logo*\n\n🧞‍♂️.ff5 : Makes FF logo*\n\n🧞‍♂️.ff6 : Makes FF logo*\n\n🧞‍♂️.ff07 : Makes FF logo*\n\n🧞‍♂️.ff08 : Makes FF logo*\n\n🧞‍♂️.ff09 : Makes FF logo*\n\n🧞‍♂️.ff10 : Makes FF logo*\n\n🧞‍♂️.ff12 : Makes FF logo*\n\n🧞‍♂️.ff13 : Makes FF logo*\n\n🧞‍♂️.ff14 : Makes FF logo*\n\n🧞‍♂️.ff15 : Makes FF logo*\n\n🧞‍♂️.ff16 : Makes FF logo*\n\n🧞‍♂️.ff17 : Makes FF logo*\n\n🧞‍♂️.ff18 : Makes FF logo*\n\n🧞‍♂️.ff19 : Makes FF logo*\n\n🧞‍♂️.ff20 : Makes FF logo*\n\n🧞‍♂️.ff21 : Makes FF logo*\n\n🧞‍♂️.ff22 : Makes FF logo*\n\n🧞‍♂️.ff23 : Makes FF logo*\n\n🧞‍♂️.ff24 : Makes FF logo*\n\n🧞‍♂️.ff25 : Makes FF logo*\n\n🧞‍♂️.ff26 : Makes FF logo*\n\n🧞‍♂️.ff27 : Makes FF logo*\n\n🧞‍♂️.ff28 : Makes FF logo*\n\n🧞‍♂️.ff29 : Makes FF logo*\n\n🧞‍♂️.ff30 : Makes FF logo*\n\n🧞‍♂️.ff31 : Makes FF logo*\n\n🧞‍♂️.ff32 : Makes FF logo*\n\n🧞‍♂️.ff33 : Makes FF logo*\n\n🧞‍♂️.ff34 : Makes FF logo*\n\n🧞‍♂️.ff35 : Makes FF logo*\n\n🧞‍♂️.ff36 : Makes FF logo*\n\n🧞‍♂️.ff37 : Makes FF logo*\n\n🧞‍♂️.ff38 : Makes FF logo*\n\n🧞‍♂️.ff39 : Makes FF logo*\n\n🧞‍♂️.ff40 : Makes FF logo*\n\n🧞‍♂️.ff41 : Makes FF logo*\n\n🧞‍♂️.ff42 : Makes FF logo*\n\n🧞‍♂️.ff43 : Makes FF logo*\n\n🧞‍♂️.ff44 : Makes FF logo*\n\n🧞‍♂️.ff45 : Makes FF logo*\n\n🧞‍♂️.ff46 : Makes FF logo*\n\n🧞‍♂️.ff47 : Makes FF logo*\n\n🧞‍♂️.ff48 : Makes FF logo*\n\n🧞‍♂️.ff49 : Makes FF logo*\n\n🧞‍♂️.ff50 : Makes FF logo*\n\n`
+            XeonBotInc.sendMessage(from, { text: code }, { quoted: m})
+            }
+            break
             case 'dyno': case 'clear': case 'mediafire': case 'fb': case 'tiktok': case 'panel': case 'mute': case 'update': {
                 XeonBotInc.sendMessage(from, { text: `⛔ *එය තවම සූදානම් නොමැත.* *ඇලෙක්සා bot ගේ මීලග version update එකෙන් පසුව බලාපොරොත්තු වන්න.* *Coming soon*` }, { quoted: m})
         }
             break
             case 'alexa': {
-                reply(`*🧞‍♀️විධානය*  .ban\n*💠විස්තරය*  කණ්ඩායමේ කෙනෙකු ඉවත් කරන්න. පණිවිඩය mention දෙන්න හෝ විධානය භාවිතා කිරීමට පුද්ගලයකු ටැග් කරන්න\n\n*🧞‍♀️විධානය*  .add\n*💠විස්තරය*  කණ්ඩායමට යමෙකු එකතු කරයි\n\n*🧞‍♀️විධානය*  .mute\n*💠විස්තරය*  කණ්ඩායමේ chat නිශ්ශබ්ද කරන්න. පණිවිඩය යැවිය හැක්කේ admin පමණි\n\n*🧞‍♀️විධානය*  .unmute\n*💠විස්තරය*  කණ්ඩායම් chat නිශ්ශබ්ද කිරීම ඉවත් කිරීම. ඕනෑම කෙනෙකුට පණිවිඩයක් යැවිය හැකිය.\n\n*🌀විධානය*  .clear\n*💠විස්තරය*  Chat මකා දමයි.\n\n*🧞‍♀️විධානය*  .promote\n*💠විස්තරය*  සාමාජිකයන් admin කරයි.\n\n*🧞‍♀️විධානය*  .demote\n*💠විස්තරය*  Admin සාමාජිකයකු බවට පත් කරයි.\n\n*🧞‍♀️විධානය*  .plugin\n*💠විස්තරය*  plugin ස්ථාපනය කරන්න.\n\n*🧞‍♀️විධානය*  .remove\n*💠විස්තරය*  plugin ඉවත් කරයි.\n\n*🧞‍♀️විධානය*  .invite\n*💠විස්තරය*  කණ්ඩායමේ ආරාධනා ලින්කුව සපයයි.\n\n*🧞‍♀️විධානය*  .afk\n*💠විස්තරය*  එය bot AFK බවට පත් කරයි.\n\n*🧞‍♀️විධානය*  .restart\n*💠විස්තරය*  Restart the bot.\n\n*🧞‍♀️විධානය*  .shutdown\n*💠විස්තරය*  Shutdown the Bot.\n\n*🧞‍♀️විධානය*  .setvar\n*💠විස්තරය*  Heroku config vars සකසන්න.\n\n*🧞‍♀️විධානය*  .getvar\n*💠විස්තරය*  Heroku config var ලබා ගන්න\n\n*🧞‍♀️විධානය*  .speedtest\n*💠විස්තරය*   Download කිරීම සහ Upload කිරීමේ වේගය මැනීම.\n\n*🧞‍♀️විධානය*  .filter\n*💠විස්තරය*  එය filters එක් කරයි. කවුරුහරි ඔබේ filter word ලියන්නේ නම්, එය පිළිතුර යවයි. ඔබ .filter ලිවුවහොත් එය ඔබගේ filters ලැයිස්තුව පෙන්වනු ඇත.\n\n*🧞‍♀️විධානය*   .stop\n*💠විස්තරය*   ඔබ කලින් එකතු කළ filters නවත්වයි.\n\n*🧞‍♀️විධානය*   .welcome\n*💠විස්තරය*   එය පිළිගැනීමේ පණිවිඩය සකසයි.\n\n*🧞‍♀️විධානය*  .goodbye\n*💠විස්තරය*  සමුගැනීමේ පණිවිඩය සකසයි.\n\n*🧞‍♀️විධානය*  .kickme\n*💠විස්තරය*  එය විධානය ලබා දී ඇති කණ්ඩායමෙන් bot ඉවත් කරයි.\n\n*🧞‍♀️විධානය*  .pp\n*💠විස්තරය*  ඔබ mention සපයන ඡායාරූපය, bot profile ඡායාරූපය කරයි.\n\n*🧞‍♀️විධානය*  .block\n*💠විස්තරය*  Block tagged user.\n\n*🧞‍♀️විධානය*  .unblock\n*💠විස්තරය*  Unblock tagged user.\n\n*🧞‍♀️විධානය*  .jid\n*💠විස්තරය*  පරිශීලකයාගේ JID ලබා දෙයි.\n\n*🧞‍♀️විධානය*  .tagall\n*💠විස්තරය*  කණ්ඩායමේ සිටින සියල්ලන් ටැග් කරයි.\n\n*🧞‍♀️විධානය*  .update\n*💠විස්තරය*  Updates පරීක්ෂා කරයි.\n\n*🧞‍♀️විධානය*  .update now\n*💠විස්තරය*  එය බොට් update කරයි.\n\n*🧞‍♀️විධානය*  .dyno\n*💠විස්තරය*  Showing heroku dyno hours.\n\n*🧞‍♀️විධානය*  .add\n*💠විස්තරය*  කණ්ඩායමට යමෙකු එකතු කරයි\n\n*🧞‍♀️විධානය*  .sysd\n*💠විස්තරය*  පද්ධති සංඛ්යාලේඛන පෙන්වීම\n\n*🌀විධානය*  .rename\n*💠විස්තරය*  සමූහයෙ නම වෙනස් කරයි.\n\n*🌀විධානය*  .safemode on -off\n*💠විස්තරය*  අර queen මේ queen ඔයාගෙ ගෲප් එක ස්පෑම් ගහන්න හැදුවොත් Auto Remove.`)
+                reply(`*🧚‍♀️විධානය*  .ban\n*👒විස්තරය*  කණ්ඩායමේ කෙනෙකු ඉවත් කරන්න. පණිවිඩය mention දෙන්න හෝ විධානය භාවිතා කිරීමට පුද්ගලයකු ටැග් කරන්න\n\n*🧚‍විධානය*  .add\n*👒විස්තරය*  කණ්ඩායමට යමෙකු එකතු කරයි\n\n*🧚‍විධානය*  .mute\n*👒විස්තරය*  කණ්ඩායමේ chat නිශ්ශබ්ද කරන්න. පණිවිඩය යැවිය හැක්කේ admin පමණි\n\n*🧚‍♀️විධානය*  .unmute\n*👒විස්තරය*  කණ්ඩායම් chat නිශ්ශබ්ද කිරීම ඉවත් කිරීම. ඕනෑම කෙනෙකුට පණිවිඩයක් යැවිය හැකිය.\n\n*🧚‍විධානය*  .clear\n*👒විස්තරය*  Chat මකා දමයි.\n\n*🧚‍♀️විධානය*  .promote\n*👒විස්තරය*  සාමාජිකයන් admin කරයි.\n\n*🧚‍♀️විධානය*  .demote\n*👒විස්තරය*  Admin සාමාජිකයකු බවට පත් කරයි.\n\n*🧚‍♀️විධානය*  .plugin\n*👒විස්තරය*  plugin ස්ථාපනය කරන්න.\n\n*🧚‍♀️විධානය*  .remove\n*👒විස්තරය*  plugin ඉවත් කරයි.\n\n*🧚‍♀️විධානය*  .invite\n*👒විස්තරය*  කණ්ඩායමේ ආරාධනා ලින්කුව සපයයි.\n\n*🧚‍♀️විධානය*  .afk\n*👒විස්තරය*  එය bot AFK බවට පත් කරයි.\n\n*🧚‍♀️විධානය*  .restart\n*👒විස්තරය*  Restart the bot.\n\n*🧚‍♀️විධානය*  .shutdown\n*👒විස්තරය*  Shutdown the Bot.\n\n*🧚‍විධානය*  .setvar\n*👒විස්තරය*  Heroku config vars සකසන්න.\n\n*🧚‍♀️විධානය*  .getvar\n*👒විස්තරය*  Heroku config var ලබා ගන්න\n\n*🧚‍♀️විධානය*  .speedtest\n*👒විස්තරය*   Download කිරීම සහ Upload කිරීමේ වේගය මැනීම.\n\n*🧚‍♀️විධානය*  .filter\n*👒විස්තරය*  එය filters එක් කරයි. කවුරුහරි ඔබේ filter word ලියන්නේ නම්, එය පිළිතුර යවයි. ඔබ .filter ලිවුවහොත් එය ඔබගේ filters ලැයිස්තුව පෙන්වනු ඇත.\n\n*🧚‍විධානය*   .stop\n*👒විස්තරය*   ඔබ කලින් එකතු කළ filters නවත්වයි.\n\n*🧚‍විධානය*   .welcome\n*👒විස්තරය*   එය පිළිගැනීමේ පණිවිඩය සකසයි.\n\n*🧚‍විධානය*  .goodbye\n*👒විස්තරය*  සමුගැනීමේ පණිවිඩය සකසයි.\n\n*🧚‍විධානය*  .kickme\n*👒විස්තරය*  එය විධානය ලබා දී ඇති කණ්ඩායමෙන් bot ඉවත් කරයි.\n\n*🧚‍♀️විධානය*  .pp\n*👒විස්තරය*  ඔබ mention සපයන ඡායාරූපය, bot profile ඡායාරූපය කරයි.\n\n*🧚‍විධානය*  .block\n*👒විස්තරය*  Block tagged user.\n\n*🧚‍♀️විධානය*  .unblock\n*👒විස්තරය*  Unblock tagged user.\n\n*🧚‍විධානය*  .jid\n*👒විස්තරය*  පරිශීලකයාගේ JID ලබා දෙයි.\n\n*🧚විධානය*  .tagall\n*👒විස්තරය*  කණ්ඩායමේ සිටින සියල්ලන් ටැග් කරයි.\n\n*🧚‍♀️විධානය*  .update\n*👒විස්තරය*  Updates පරීක්ෂා කරයි.\n\n*🧚‍විධානය*  .update now\n*👒විස්තරය*  එය බොට් update කරයි.\n\n*🧚‍♀️විධානය*  .dyno\n*👒විස්තරය*  Showing heroku dyno hours.\n\n*🧚‍♀️විධානය*  .add\n*👒විස්තරය*  කණ්ඩායමට යමෙකු එකතු කරයි\n\n*🧚‍♀️විධානය*  .sysd\n*👒විස්තරය*  පද්ධති සංඛ්යාලේඛන පෙන්වීම\n\n*🧚‍♂️විධානය*  .rename\n*👒විස්තරය*  සමූහයෙ නම වෙනස් කරයි.\n\n*🧚විධානය*  .safemode on -off\n*👒විස්තරය*  අර queen මේ queen ඔයාගෙ ගෲප් එක ස්පෑම් ගහන්න හැදුවොත් Auto Remove.`)
             }
             break
 case 'allmenu': {
