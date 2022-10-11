@@ -2145,28 +2145,18 @@ break
                 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
-	    case 'song': case 'ytmp4': case 'audio': {
+	    case 'song': case 'ytmp3': case 'audio': {
 	            if (!text) return reply(`⛔*Enter name.*\nකරුණාකර සබැදියක් හෝ නමක් ඇතුලත් කරන්න.*`)
-	            XeonBotInc.sendMessage(from, { text: `*~please wait, I'm search song~*` }, { quoted: m})
-	            oh = `⛔ *INVAID DOWNLOADED*`
-                
-                axios.get(`http://zekais-api.herokuapp.com/ytplay?query=${text}&apikey=y77ZwRxG`)
+	            axios.get(`http://zekais-api.herokuapp.com/ytplay?query=${text}&apikey=y77ZwRxG`)
       .then(({data}) => {
-					if (data.status == false) return reply(`⛔ *NOT FOUND*`)
-                XeonBotInc.sendMessage(from, { text: `*•○●Download you song●○•*` }, { quoted: m})
-                XeonBotInc.sendMessage(m.chat, { audio: { url: data.result }, mimetype: 'audio/mpeg', fileName: `${data.title}.mp3` }, { quoted: m }).catch ((err) => reply(oh))
-             })
+					XeonBotInc.sendMessage(m.chat, { audio: { url: data.result }, mimetype: 'audio/mpeg'}, { quoted: m })
              }
              break
-             case 'ytmp3': case 'video': case 'ytvideo': {
-                oh = `⛔ *INVAID DOWNLOADED*`
+             case 'ytmp4': case 'video': case 'ytvideo': {
                 if (!text) return reply(`⛔*Enter name.*\nකරුණාකර සබැදියක් හෝ නමක් ඇතුලත් කරන්න.*`)
                 axios.get(`https://zenzapis.xyz/downloader/youtube?apikey=016aef4e26e1&url=${text}`)
 					.then(({data}) => {
-					if (data.status == false) return reply(`⛔ *NOT FOUND*`)
-					XeonBotInc.sendMessage(from, { text: `*•○●Download you song●○•*` }, { quoted: m})
-					XeonBotInc.sendMessage(m.chat, { audio: { url: data.result.getAudio }, mimetype: 'video/mp4' }, { quoted: m }).catch ((err) => reply(oh))
-            })
+					XeonBotInc.sendMessage(m.chat, { audio: { url: data.result.getAudio }, mimetype: 'video/mp4'}, { quoted: m })
             }
             break
             case 'amazone': case 'neotro': {
@@ -2928,7 +2918,7 @@ case 'webtonsearch': case 'webtoon':
                 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
-            case 'tiktokwmx': case 'tiktokwatermarkx': {
+            case 'tiktok': case 'tiktokwatermarkx': {
                 if (!text) return reply(`Enter Query Link!`)
                 reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/downloader/tiktok', { url: text }, 'apikey'))
@@ -2964,7 +2954,7 @@ case 'webtonsearch': case 'webtoon':
                 XeonBotInc.sendMessage(m.chat, { audio: { url: anu.result.audio }, mimetype: 'audio/mpeg'}, { quoted: msg })
             }
             break
-	        case 'instagramx': case 'igx': case 'igdlx': {
+	        case 'instagram': case 'igx': case 'igdlx': {
                 if (!text) return reply(`No Query Url!`)
                 reply(mess.wait)
                 if (/(?:\/p\/|\/reel\/|\/tv\/)([^\s&]+)/.test(isUrl(text)[0])) {
