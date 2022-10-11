@@ -2145,20 +2145,6 @@ break
                 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
-	    case 'song': case 'ytmp3': case 'audio': {
-	    if (!text) return reply(`⛔*Enter name.*\nකරුණාකර සබැදියක් හෝ නමක් ඇතුලත් කරන්න.*`)
-	            axios.get(`http://zekais-api.herokuapp.com/ytplay?query=${text}&apikey=y77ZwRxG`)
-      .then(({data}) => {
-					XeonBotInc.sendMessage(m.chat, { audio: { url: data.result }, mimetype: 'audio/mpeg'   }, { quoted: m })
-             }
-             break
-             case 'ytmp4': case 'video': case 'ytvideo': {
-                if (!text) return reply(`⛔*Enter name.*\nකරුණාකර සබැදියක් හෝ නමක් ඇතුලත් කරන්න.*`)
-                axios.get(`https://zenzapis.xyz/downloader/youtube?apikey=016aef4e26e1&url=${text}`)
-					.then(({data}) => {
-					XeonBotInc.sendMessage(m.chat, { audio: { url: data.result.getAudio }, mimetype: 'video/mp4'  }, { quoted: m })
-            }
-            break
             case 'amazone': case 'neotro': {
                 let buttons = [
                     {buttonId: `github`, buttonText: {displayText: '👨‍💻STATUS'}, type: 1},
