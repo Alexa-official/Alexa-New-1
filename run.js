@@ -3475,7 +3475,6 @@ case 'cry':case 'kill':case 'hug':case 'pat':case 'lick':case 'kiss':case 'bite'
 					NoHorny = await fetchJson(`https://rei-api.herokuapp.com/api/image/neko2`)
 					YesHorny = await getBuffer(NoHorny.result.url)
 					XeonBotInc.sendMessage(from, {image:YesHorny},{quoted:m})
-					})
 					break
 case "setmenuxxx": 
 if (!text) return reply("1. image\n2. list\n3. catalog\n\nExample .setmenu image")
