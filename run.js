@@ -2116,6 +2116,15 @@ break
                 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
+            case 'song': case 'video': {
+            	anu = await fetchJson(`https://api.akuari.my.id/downloader/youtube?link=${text}`)        
+                if (anu.filesize_video >= 999999) return reply('*File Over Limit* '+util.format(anu))
+                tummb = await getBuffer(anu.thumb)
+                audio = await getBuffer(anu.audio)        
+                XeonBotInc.sendMessage(m.chat, {document: audio, mimetype: 'audio/mpeg', fileName: `${anu.title}`}, { quoted : m }).catch((err) => reply(mess.error))
+                XeonBotInc.sendMessage(m.chat, { video: { url: anu.video }, jpegThumbnail:tummb, caption: `${util.format(anu)}`}, { quoted: m }).catch((err) => reply(mess.error))
+            }
+            break
             case 'logo-pack': {
                 let buttons = [
                     {buttonId: `anime`, buttonText: {displayText: '*Cartoon cute gril*'}, type: 1},
@@ -3560,7 +3569,7 @@ case 'cry':case 'kill':case 'hug':case 'pat':case 'lick':case 'kiss':case 'bite'
 				case 'anime2':
 					reply(mess.wait)
 					NoHorny = await fetchJson(`https://rei-api.herokuapp.com/api/image/neko2`)
-					YesHorny = await getBuffer(NoHorny.result.url)
+					YesHorny = await getBuffer(NoHorny.url)
 					XeonBotInc.sendMessage(m.chat, { image: { url: YesHorny }, caption: '👸 *Made by Queen-Alexa*' }, { quoted: m })
 					break
 case "setmenuxxx": 
