@@ -1,18 +1,9 @@
+FROM fusuf/whatsasena:latest
 
-FROM node:lts-buster
+RUN git clone https://github.com/En-Cuzier/alexa /root/alexa
+WORKDIR /root/alexa/
+ENV TZ=Europe/Istanbul
+RUN npm install supervisor -g
+RUN yarn install --no-audit
 
-RUN apt-get update && \
-  apt-get install -y \
-  ffmpeg \
-  imagemagick \
-  webp && \
-  apt-get upgrade -y && \
-  rm -rf /var/lib/apt/lists/*
-
-COPY package.json .
-
-RUN npm install
-
-COPY . .
-
-CMD ["node", "."]
+CMD ["node", "install.js"]
