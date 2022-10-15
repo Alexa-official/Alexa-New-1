@@ -2118,11 +2118,12 @@ break
             break
             case 'song': case 'video': {
             	anu = await fetchJson(`https://api.akuari.my.id/downloader/youtube?link=${text}`)        
+                apu = await fetchJson(`https://api.akuari.my.id/downloader/youtube3?link=${text}&type=360`)
                 if (anu.filesize_video >= 999999) return reply('*File Over Limit* '+util.format(anu))
                 tummb = await getBuffer(anu.thumb)
-                audio = await getBuffer(anu.audio)        
+                audio = await getBuffer(apu.audio)        
                 XeonBotInc.sendMessage(m.chat, {document: audio, mimetype: 'audio/mpeg', fileName: `${anu.title}`}, { quoted : m }).catch((err) => reply(mess.error))
-                XeonBotInc.sendMessage(m.chat, { video: { url: anu.video }, jpegThumbnail:tummb, caption: `${util.format(anu)}`}, { quoted: m }).catch((err) => reply(mess.error))
+                XeonBotInc.sendMessage(m.chat, { video: { url: apu.video }, jpegThumbnail:tummb, caption: `${util.format(anu)}`}, { quoted: m }).catch((err) => reply(mess.error))
             }
             break
             case 'logo-pack': {
