@@ -21,6 +21,9 @@
     "url": "https://github.com/ChamodKeshan/Alexa-New/issues"
   },
   "homepage": "https://github.com/ChamodKeshan/Alexa-New",
+  "devDependencies": {
+  "simple-git": ">=3.5.0"
+  },
   "dependencies": {
      "@adiwajshing/baileys": "^4.4.0",
     "@adiwajshing/keyed-db": "^0.2.4",  
