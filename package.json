@@ -1,15 +1,15 @@
 {
-  "name": "Alexa-New",
+  "name": "Alexa-New-1",
   "version": "1.0.0",
   "description": "whatsapp user bot.",
-  "main": "/ales/install.js",
+  "main": "/ales/bot.js",
   "type": "commonjs",
   "scripts": {
-    "start": "supervisor -s install.js"
+    "start": "supervisor -s bot.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChamodKeshan/Alexa-New.git"
+    "url": "git+https://github.com/Alexa-official/Alexa-New-1.git"
   },
   "engines" : { 
     "node" : ">=14.19.3"
@@ -18,12 +18,9 @@
   "developer": "chamod",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/ChamodKeshan/Alexa-New/issues"
+    "url": "https://github.com/Alexa-official/Alexa-New-1/issues"
   },
-  "homepage": "https://github.com/ChamodKeshan/Alexa-New",
-  "devDependencies": {
-  "simple-git": ">=3.5.0"
-  },
+  "homepage": "https://github.com/Alexa-official/Alexa-New-1",
   "dependencies": {
      "@adiwajshing/baileys": "^4.4.0",
     "@adiwajshing/keyed-db": "^0.2.4",  
