@@ -1,5 +1,5 @@
 {
-  "name": "Aquabot-New",
+  "name": "Alexa-New",
   "version": "1.0.0",
   "description": "whatsapp user bot.",
   "main": "/ales/install.js",
@@ -16,7 +16,7 @@
   },
   "author": "chamod keshan",
   "developer": "chamod",
-  "license": "MIT",
+  "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/ChamodKeshan/Alexa-New/issues"
   },
