@@ -41,6 +41,10 @@
     
   <a herf="https://heroku.com/deploy?template=https://github.com/Alexa-official/Alexa-New"><img src="Hi">
    </p>     <a/>
+
+   <a href="https://heroku.com/deploy?"><img src="https://repl.it/badge/github/ChamodKeshan/Queen-Alexa">
+    </p>    <a/>
+
 ## 👨‍💻 Developers & Contributors 👨‍💻
 
  [![EN-Cuzier](https://github.com/En-Cuzier.png?size=100)](https://github.com/En-Cuzier) | [![jesonpro](https://github.com/jesonpro.png?size=100)](https://github.com/jesonpro) | [![ChamodKeshan](https://github.com/ChamodKeshan.png?size=100)](https://github.com/ChamodKeshan) |
